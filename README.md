@@ -14,11 +14,14 @@ The plugin must provide a comprehensive set of advertising campaign features.
 Integration with other advertising platforms should be considered.
 
 
+### Project Progress Tracker: https://github.com/orgs/PalisadoesFoundation/projects/11/views/1
+
 ## Issue and Pull requests :
 
 ## 1. Refactoring Plugin architecture by transitioning into websockets.
-  The plugin in talawa application  works just like a browser extension works in a browser. The difference here is that the plugin store from which the plugin is installed is handled by the admin of that organization and are used by the members of the organization.
-  
+  The plugin in talawa application  works just like a browser extension works in a browser. The difference here is that the plugin store from which the plugin is installed is handled by the admin of that organization and are used by the members of the organization. The current implementation uses long polling which is not very efficient in terms of cloud costs. These API connections should be converted to use subscription to reduce the number of calls we have to make to server.
+
+Here are list of issues and pull requests reagarding that
  ### Talawa Admin
  
  #### Issue : [Feature Request : [Features as Plugins] Implement UI for AddOnStore with Proper Server Calls](https://github.com/PalisadoesFoundation/talawa-admin/issues/356)
@@ -30,33 +33,86 @@ Integration with other advertising platforms should be considered.
 - Implement Search Functionality for plugins
 - Added fallback screen for the plugin store
 
- 
- 
- ### Talawa
+### Talawa API
 
- #### Issue : [Feature Request : Plugin Architecture (Features as Plugins)](https://github.com/PalisadoesFoundation/talawa/issues/1339)
+#### Issue : [Feature Request: auto populating plugin data during the initial server setup](https://github.com/PalisadoesFoundation/talawa-api/issues/1337)
  
- #### Pull request: [ [GSoC] Feature Request : Plugin Architecture (Features as Plugins)](https://github.com/PalisadoesFoundation/talawa/pull/1340)
+ #### Pull request: [ [GSoC][Feature Request] : Feature Request: auto populating plugin data during the initial server setup](https://github.com/PalisadoesFoundation/talawa-api/pull/1345)
  
  Summary : 
-- Implemented `TalawaPluginProvider` widget to implement plugin.
-- `fetch_plugin_list` function to load new plugins
-- Integrated Plugin list with the Hive database.
+- Add Node.JS funtion in the server that check if currently any default plugin data is present in the current database instance or not.
+- If present it would not do anything
+- If plugin data is not present it takes the default plugin data from server's file and upload to the database
 
- 
- 
- ### Talawa API
+#### Video Demo: [Talawa API: Demos of Websocket, schema change, auto populating features](https://www.youtube.com/watch?v=MaETaxPGNxk)
 
-#### Issue : [Feature Request : [Feature Request : [Implementing features as plugins] Implement GraphQL queries and Mutations for Plugin Architecture](https://github.com/PalisadoesFoundation/talawa-api/issues/731)
+#### Chapters:
+
+- 0:00 Auto Populating plugins demo
+- 05:38 Discussing websockets code and change schema code
+- 10:10 Demo of Websockets, createPlugin, updatePluginStatus
+--- 
+#### Issue : [Conversion from HTTP TO Websockets for all plugin operations(https://github.com/PalisadoesFoundation/talawa-api/issues/1354)
  
- #### Pull request: [ [GSoC][Feature Request] : Plugin Architecture for Server](https://github.com/PalisadoesFoundation/talawa-api/pull/730)
- 
+ #### Pull request: [ [GSoC][Feature Request] : Conversion from HTTP TO Websockets for all plugin operations](https://github.com/PalisadoesFoundation/talawa-api/pull/1355)
+
  Summary : 
-- Create new MongoDB Model for plugin
-- Implemented GraphQL query to get list of plugins `getPlugins`
-- Added GraphQL mutation to add new plugin in database `createPlugin`
-- Added GraphQL mutation to update install staatus of the plugin for a specific organization `updatePluginStatus`
-- Added GraphQL mutation to update the installed organizations list of plugin `updatePluginInstalledOrgs`
+![image](https://github.com/SiddheshKukade/Google-Summer-of-Code-2023-Work-Product/assets/65951872/14c68aad-0477-4774-8f48-e580ab04aaf7)
+![image](https://github.com/SiddheshKukade/Google-Summer-of-Code-2023-Work-Product/assets/65951872/2ae53fe2-c4d4-46c4-8471-e13d3f242941)
+
+- CHanged a Plugin model schema to reduce the complexity in the code.
+  -  Before:
+      ```js
+        const pluginSchema = new Schema({
+        pluginName: 
+        pluginCreatedBy:
+        pluginDesc: 
+        pluginInstallStatus: 
+        installedOrgs: [],
+      });
+      ```
+  -  After:
+      ```js
+      const pluginSchema = new Schema({
+          pluginName: 
+          pluginCreatedBy:
+          pluginDesc: 
+          uninstalledOrgs: [], /// containing list of orgs who've that plugin feature disabled.
+        });
+      ```
+- Created a websocket server in Apollo GraphQL to allow to subscribe to socket events.
+- Wtitten API to update and delete plugin recrods and accordingly notify the server via GraphQL subscriptions.
+
+#### Video Demo: 
+- [Talawa API: Demos of Websocket, schema change, auto populating features](https://www.youtube.com/watch?v=MaETaxPGNxk)
+- [Utilizing the subscription ](https://youtu.be/B72h2fM5KsA)
+---
+
+#### Issue : [Conversion from HTTP TO Websockets for all plugin operations(https://github.com/PalisadoesFoundation/talawa-api/issues/1354)
+ 
+ #### Pull request: [ [GSoC][Feature Request] : Conversion from HTTP TO Websockets for all plugin operations](https://github.com/PalisadoesFoundation/talawa-api/pull/1355)
+
+ Summary : 
+![image](https://github.com/SiddheshKukade/Google-Summer-of-Code-2023-Work-Product/assets/65951872/14c68aad-0477-4774-8f48-e580ab04aaf7)
+![image](https://github.com/SiddheshKukade/Google-Summer-of-Code-2023-Work-Product/assets/65951872/2ae53fe2-c4d4-46c4-8471-e13d3f242941)
+
+- Created a websocket server in Apollo GraphQL to allow to subscribe to socket events.
+- Wtitten API to update and delete plugin recrods and accordingly notify the server via GraphQL subscriptions.
+
+#### Video Demo: 
+- [Talawa API: Demos of Websocket, schema change, auto populating features](https://www.youtube.com/watch?v=MaETaxPGNxk)
+- [Utilizing the subscription ](https://youtu.be/B72h2fM5KsA)
+---
+
+
+
+
+
+
+
+
+
+
 
  ## 2. The creation of Donations plugin to prove the concept
   Donation is a feature on `talawa` mobile app that enables organization members to donate to current organization throught credit card.The Donation is also implemented as plugin which makes it accessible in the mobile app only if it is installed by the admin of that organization
