@@ -184,7 +184,7 @@ Summary:
 Throughout my Google Summer of Code 2023 journey. I have worked on different features including both front-end and back-end web devlopment. I also worked with new technologies like WebsSocket protocol.
 I've worked with my mentors  [Tasneem Koushar](https://github.com/tasneemkoushar), [Dominic Mills](https://github.com/DMills27) , & [Peter Harrison](https://github.com/palisadoes) to design and implement these features like advetisement, adding default plugin data in database. We had bi-weekly meeting to dicuss and provide feedback on current progress of work that helped me a lot to quickly figure out my mistakes. I would also like to thank my mentors, org admins and other contributors for helping me to make the project possible. Palisadoes Foundation has a very supportive community that believes in helping each other to grow together.
 
-Thank you @Google for Organizing such a great opportunity. 💛 🌞
+Thank you [Google](https://github.com/google) for Organizing such a great opportunity. 💛 🌞
 
 
 
