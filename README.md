@@ -35,16 +35,19 @@ Here are list of issues and pull requests reagarding that
 
 ### Talawa API
 
-#### Issue : [Feature Request: auto populating plugin data during the initial server setup](https://github.com/PalisadoesFoundation/talawa-api/issues/1337)
+#### Issue : 
+- [Feature Request: auto populating plugin data during the initial server setup](https://github.com/PalisadoesFoundation/talawa-api/issues/1337)
  
- #### Pull request: [ [GSoC][Feature Request] : Feature Request: auto populating plugin data during the initial server setup](https://github.com/PalisadoesFoundation/talawa-api/pull/1345)
+ #### Pull request:
+ - [ [GSoC][Feature Request] : Feature Request: auto populating plugin data during the initial server setup](https://github.com/PalisadoesFoundation/talawa-api/pull/1345)
  
  Summary : 
 - Add Node.JS funtion in the server that check if currently any default plugin data is present in the current database instance or not.
 - If present it would not do anything
 - If plugin data is not present it takes the default plugin data from server's file and upload to the database
 
-#### Video Demo: [Talawa API: Demos of Websocket, schema change, auto populating features](https://www.youtube.com/watch?v=MaETaxPGNxk)
+#### Video Demo: 
+- [Talawa API: Demos of Websocket, schema change, auto populating features](https://www.youtube.com/watch?v=MaETaxPGNxk)
 
 #### Chapters:
 
@@ -52,11 +55,13 @@ Here are list of issues and pull requests reagarding that
 - 05:38 Discussing websockets code and change schema code
 - 10:10 Demo of Websockets, createPlugin, updatePluginStatus
 --- 
-#### Issue : [Conversion from HTTP TO Websockets for all plugin operations(https://github.com/PalisadoesFoundation/talawa-api/issues/1354)
- 
- #### Pull request: [ [GSoC][Feature Request] : Conversion from HTTP TO Websockets for all plugin operations](https://github.com/PalisadoesFoundation/talawa-api/pull/1355)
+#### Issue : 
+- [Conversion from HTTP TO Websockets for all plugin operations(https://github.com/PalisadoesFoundation/talawa-api/issues/1354)Feature Request: Changing Schema of Plugins
 
- Summary : 
+ #### Pull request: 
+- [ [GSoC][Feature Request] : Conversion from HTTP TO Websockets for all plugin operations](https://github.com/PalisadoesFoundation/talawa-api/pull/1355)
+
+ *Summary* : 
 ![image](https://github.com/SiddheshKukade/Google-Summer-of-Code-2023-Work-Product/assets/65951872/14c68aad-0477-4774-8f48-e580ab04aaf7)
 ![image](https://github.com/SiddheshKukade/Google-Summer-of-Code-2023-Work-Product/assets/65951872/2ae53fe2-c4d4-46c4-8471-e13d3f242941)
 
@@ -88,7 +93,8 @@ Here are list of issues and pull requests reagarding that
 - [Utilizing the subscription ](https://youtu.be/B72h2fM5KsA)
 ---
 
-#### Issue : [Conversion from HTTP TO Websockets for all plugin operations(https://github.com/PalisadoesFoundation/talawa-api/issues/1354)
+#### Issue :
+ [Convers-ion fromHTTP TO Websockets for all plugin operations(https://github.com/PalisadoesFoundation/talawa-api/issues/1354)
  
  #### Pull request: [ [GSoC][Feature Request] : Conversion from HTTP TO Websockets for all plugin operations](https://github.com/PalisadoesFoundation/talawa-api/pull/1355)
 
