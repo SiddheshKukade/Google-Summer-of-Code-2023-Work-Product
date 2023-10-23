@@ -24,14 +24,22 @@ Integration with other advertising platforms should be considered.
 Here are list of issues and pull requests reagarding that
  ### Talawa Admin
  
- #### Issue : [Feature Request : [Features as Plugins] Implement UI for AddOnStore with Proper Server Calls](https://github.com/PalisadoesFoundation/talawa-admin/issues/356)
+ #### Issue : 
+ - [Feature Request : Adding Plugin Logic to the Talawa Mobile Web App](https://github.com/PalisadoesFoundation/talawa-admin/issues/975)
  
- #### Pull request: [Plugin Architecture for Admin](https://github.com/PalisadoesFoundation/talawa-admin/pull/355)
+ #### Pull request: 
+ - [Adding Plugin Logic to the Talawa Mobile Web App](https://github.com/PalisadoesFoundation/talawa-admin/pull/976)
  
  Summary : 
-- Refractored Store UI 
-- Implement Search Functionality for plugins
-- Added fallback screen for the plugin store
+- Setting Up socket connections
+- Adding the toggling logic
+- Finding a way to store and handle that data.
+
+### Video Demo: 
+- [Talawa Plugin working demo on web version | GSoC 2023 Sept Work Report | Siddhesh Kukade Palisadoes](https://www.youtube.com/watch?v=iUd5zbpEAdI)
+- [ Plugin Demo on Web app with Multiple features removal and additions | GSoC Work Report | Palisadoes](https://www.youtube.com/watch?v=zpV-P7El_qk)
+
+---
 
 ### Talawa API
 
@@ -60,12 +68,13 @@ Here are list of issues and pull requests reagarding that
 
  #### Pull request: 
 - [ [GSoC][Feature Request] : Conversion from HTTP TO Websockets for all plugin operations](https://github.com/PalisadoesFoundation/talawa-api/pull/1355)
+- [ [GSoC][Fix] : Removed Windows Specific Pacakges](https://github.com/PalisadoesFoundation/talawa-api/pull/1355)
 
  *Summary* : 
 ![image](https://github.com/SiddheshKukade/Google-Summer-of-Code-2023-Work-Product/assets/65951872/14c68aad-0477-4774-8f48-e580ab04aaf7)
 ![image](https://github.com/SiddheshKukade/Google-Summer-of-Code-2023-Work-Product/assets/65951872/2ae53fe2-c4d4-46c4-8471-e13d3f242941)
 
-- CHanged a Plugin model schema to reduce the complexity in the code.
+- Changed a Plugin model schema to reduce the complexity in the code.
   -  Before:
       ```js
         const pluginSchema = new Schema({
@@ -87,34 +96,12 @@ Here are list of issues and pull requests reagarding that
       ```
 - Created a websocket server in Apollo GraphQL to allow to subscribe to socket events.
 - Wtitten API to update and delete plugin recrods and accordingly notify the server via GraphQL subscriptions.
+- Fixed some windows related run-time errors.
 
 #### Video Demo: 
 - [Talawa API: Demos of Websocket, schema change, auto populating features](https://www.youtube.com/watch?v=MaETaxPGNxk)
 - [Utilizing the subscription ](https://youtu.be/B72h2fM5KsA)
 ---
-
-#### Issue :
- [Convers-ion fromHTTP TO Websockets for all plugin operations(https://github.com/PalisadoesFoundation/talawa-api/issues/1354)
- 
- #### Pull request: [ [GSoC][Feature Request] : Conversion from HTTP TO Websockets for all plugin operations](https://github.com/PalisadoesFoundation/talawa-api/pull/1355)
-
- Summary : 
-![image](https://github.com/SiddheshKukade/Google-Summer-of-Code-2023-Work-Product/assets/65951872/14c68aad-0477-4774-8f48-e580ab04aaf7)
-![image](https://github.com/SiddheshKukade/Google-Summer-of-Code-2023-Work-Product/assets/65951872/2ae53fe2-c4d4-46c4-8471-e13d3f242941)
-
-- Created a websocket server in Apollo GraphQL to allow to subscribe to socket events.
-- Wtitten API to update and delete plugin recrods and accordingly notify the server via GraphQL subscriptions.
-
-#### Video Demo: 
-- [Talawa API: Demos of Websocket, schema change, auto populating features](https://www.youtube.com/watch?v=MaETaxPGNxk)
-- [Utilizing the subscription ](https://youtu.be/B72h2fM5KsA)
----
-
-
-
-
-
-
 
 
 
