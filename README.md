@@ -179,12 +179,12 @@ Summary:
 - Added GraphQL endpoint in server to delete advertisement records.
 
 --- 
-
-## Working Demo Video of Plugin Architecture : 
-https://user-images.githubusercontent.com/65951872/189489729-ba913de7-8376-438f-a29d-bfcabecaddd2.mp4
+ 
 # Conclusion 
-I have spent my summer implementing a plugin for talawa application. This problem statement encouraged me to deeply study some technical concepts and writing.
-I've worked with my mentors [Dominic Mills](https://github.com/DMills27) , [Yash Dubey](https://github.com/yasharth291) & [Peter Harrison](https://github.com/palisadoes) to design and implement the plugin architecture with a Donation feature as a plugin to prove the concept thier support and feedback helped me to very much. I would also like to thank my mentors, org admins and other contributors for helping me to make the project possible. Palisadoes Foundation has a very supportive community that believes in helping each other to grow together.
+Throughout my Google Summer of Code 2023 journey. I have worked on different features including both front-end and back-end web devlopment. I also worked with new technologies like WebsSocket protocol.
+I've worked with my mentors  [Tasneem Koushar](https://github.com/tasneemkoushar), [Dominic Mills](https://github.com/DMills27) , & [Peter Harrison](https://github.com/palisadoes) to design and implement these features like advetisement, adding default plugin data in database. We had bi-weekly meeting to dicuss and provide feedback on current progress of work that helped me a lot to quickly figure out my mistakes. I would also like to thank my mentors, org admins and other contributors for helping me to make the project possible. Palisadoes Foundation has a very supportive community that believes in helping each other to grow together.
+
+Thank you @Google for Organizing such a great opportunity. 💛 🌞
 
 
 
