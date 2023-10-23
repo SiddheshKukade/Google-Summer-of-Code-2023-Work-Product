@@ -22,13 +22,31 @@ Integration with other advertising platforms should be considered.
   The plugin in talawa application  works just like a browser extension works in a browser. The difference here is that the plugin store from which the plugin is installed is handled by the admin of that organization and are used by the members of the organization. The current implementation uses long polling which is not very efficient in terms of cloud costs. These API connections should be converted to use subscription to reduce the number of calls we have to make to server.
 
 Here are list of issues and pull requests reagarding that
- ### Talawa Admin
+ ### Talawa Admin & Talawa Web
  
  #### Issue : 
  - [Feature Request : Adding Plugin Logic to the Talawa Mobile Web App](https://github.com/PalisadoesFoundation/talawa-admin/issues/975)
  
  #### Pull request: 
  - [Adding Plugin Logic to the Talawa Mobile Web App](https://github.com/PalisadoesFoundation/talawa-admin/pull/976)
+ 
+ Summary: 
+- As the plugin would be installed by default the admins should be prompted that they would be using everything or they can visit the store to disable no required features. To understand the context please refer to this video: https://youtu.be/9rBc9sdpLjM?t=513
+
+
+### Video Demo: 
+- [Siddhesh Bhupendra Kukade - Talawa Plugins Explained](https://www.youtube.com/watch?v=9rBc9sdpLjM)
+- [Updated Plugin Store talawa admin | GSoC Work Report July | Siddhesh Kukade](https://www.youtube.com/watch?v=klDNSYXnCno)
+- [Plugin Store Dialog demo | GSoC Work Report July](https://www.youtube.com/watch?v=5GOGf-C3WEo)
+
+---
+ 
+ #### Issues:
+ - [Feature Request: Refactoring old API queries to match them with updated queries for Plugin store.](https://github.com/PalisadoesFoundation/talawa-admin/issues/952)
+ - [Adding a dialog to go to plugin store after an organization is created by the admin](https://github.com/PalisadoesFoundation/talawa-admin/issues/975)
+ 
+ #### Pull request: 
+ - [Adding a dialog to go to plugin store after an organization is created by the admin](https://github.com/PalisadoesFoundation/talawa-admin/pull/951)
  
  Summary : 
 - Setting Up socket connections
@@ -43,7 +61,7 @@ Here are list of issues and pull requests reagarding that
 
 ### Talawa API
 
-#### Issue : 
+#### Issue: 
 - [Feature Request: auto populating plugin data during the initial server setup](https://github.com/PalisadoesFoundation/talawa-api/issues/1337)
  
  #### Pull request:
@@ -107,7 +125,7 @@ Here are list of issues and pull requests reagarding that
 
 
 
- ## 2. The creation of Donations plugin to prove the concept
+ ## 2. Development of Advertisement Feature
   Donation is a feature on `talawa` mobile app that enables organization members to donate to current organization throught credit card.The Donation is also implemented as plugin which makes it accessible in the mobile app only if it is installed by the admin of that organization
   
 
@@ -123,7 +141,7 @@ Here are list of issues and pull requests reagarding that
 - Added `TalawaPluginProviderNav` which is used for wrapping the navbar items to make them plugins
 - Fixed how the components were rendering using `TalawaPluginProvider`
 
-### Talawa API
+### Tal
 
 #### Issue : [Feature Request : Performing Donations ( Ability to store donation transaction in Talwa-api )](https://github.com/PalisadoesFoundation/talawa-api/issues/755)
  
