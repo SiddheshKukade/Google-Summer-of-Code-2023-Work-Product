@@ -85,7 +85,7 @@ Here are list of issues and pull requests reagarding that
 - [Conversion from HTTP TO Websockets for all plugin operations(https://github.com/PalisadoesFoundation/talawa-api/issues/1354)Feature Request: Changing Schema of Plugins
 
  #### Pull request: 
-- [ [GSoC][Feature Request] : Conversion from HTTP TO Websockets for all plugin operations](https://github.com/PalisadoesFoundation/talawa-api/pull/1355)
+- [ [GSoC][Feature Request] : [Conversion from HTTP TO Websockets for all plugin operations](https://github.com/PalisadoesFoundation/talawa-api/pull/1355)
 - [ [GSoC][Fix] : Removed Windows Specific Pacakges](https://github.com/PalisadoesFoundation/talawa-api/pull/1355)
 
  *Summary* : 
@@ -133,15 +133,19 @@ Here are list of issues and pull requests reagarding that
 
 ### Talawa Web and Talawa Admin
 
-#### Issue : [Feature Request : Enabling Plugins , Donation as a Plugin, Refractor for TalawaPluginProvider Widget](https://github.com/PalisadoesFoundation/talawa/issues/1346)
- 
- #### Pull request: [ [GSoC][Feature Request] : Enabling Plugins , Donation as a Plugin, Refractor for TalawaPluginProvider Widget ](https://github.com/PalisadoesFoundation/talawa/pull/1355)
+#### Issue : 
+
+- [Bug Report: Missing REACT_APP_BACKEND_WEBSOCKET_URL=ws://localhost:4000/graphql](https://github.com/PalisadoesFoundation/talawa-admin/issue/993)
+- [Feature Request: Adding advertisement management screen for the admin](https://github.com/PalisadoesFoundation/talawa-admin/issues/996)
+
+ #### Pull request:
+- [Feature request: Adding advertisement screen](https://github.com/PalisadoesFoundation/talawa-admin/pull/994)
  
  Summary : 
-- Implementation of Donation feature as a plugin
-- Designed and Added Logic to implement Navbar Features a plugins
-- Added `TalawaPluginProviderNav` which is used for wrapping the navbar items to make them plugins
-- Fixed how the components were rendering using `TalawaPluginProvider`
+- Developed User interface for advetisement store only loading ads matching with the current logged in org of user with features like deleting seeing the ongoing ad campgins,etc.
+- Developed a feature in Talawa User Web app to showcase those advertisement as promoted posts
+
+#### Video Demo:
 
 ### Talawa-api
 
@@ -153,8 +157,8 @@ Here are list of issues and pull requests reagarding that
  
  Summary : 
 - Added Adverstiment document Schema:
-```json advertisement:
-{
+```js
+advertisement:{
  _id: ID,
  orgID: ID,
  name: String,
@@ -166,7 +170,7 @@ Here are list of issues and pull requests reagarding that
  updatedAt: Date
 }
 ```
-What would happen after end date of adverstisements:
+
 2. Developed GraphQL endpoint:
 - createAdverstisement()
   - The created doc with the given provided schema data values and stores in the database.
@@ -174,6 +178,18 @@ What would happen after end date of adverstisements:
   - To be used if user accidentaly created that document and he wants to delete that
 - getAdvertisement()
   - Used by the mobile app to fetch all the ads to show filtered by the dates
+---
+
+#### Issue : 
+- [Feature Request: deleting advertisements](https://github.com/PalisadoesFoundation/talawa-api/issues/1416)
+ 
+ #### Pull request:
+ - [ Delete ads mutation is talawa API](https://github.com/PalisadoesFoundation/talawa-api/pull/1415)
+
+Summary:
+- Added GraphQL endpoint in server to delete advertisement records.
+
+
 ## Other
 
 #### Technical Documenmtation for plugins 
