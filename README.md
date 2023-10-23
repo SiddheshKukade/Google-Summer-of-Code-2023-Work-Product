@@ -126,10 +126,12 @@ Here are list of issues and pull requests reagarding that
 
 
  ## 2. Development of Advertisement Feature
-  Donation is a feature on `talawa` mobile app that enables organization members to donate to current organization throught credit card.The Donation is also implemented as plugin which makes it accessible in the mobile app only if it is installed by the admin of that organization
+ Adding Ads would allow 2 types of benefits:
+1. Earning revenue for the org.
+2. Companies having products related to such orgs they can directly target those customers.
   
 
-### Talawa
+### Talawa Web and Talawa Admin
 
 #### Issue : [Feature Request : Enabling Plugins , Donation as a Plugin, Refractor for TalawaPluginProvider Widget](https://github.com/PalisadoesFoundation/talawa/issues/1346)
  
@@ -141,21 +143,37 @@ Here are list of issues and pull requests reagarding that
 - Added `TalawaPluginProviderNav` which is used for wrapping the navbar items to make them plugins
 - Fixed how the components were rendering using `TalawaPluginProvider`
 
-### Tal
+### Talawa-api
 
-#### Issue : [Feature Request : Performing Donations ( Ability to store donation transaction in Talwa-api )](https://github.com/PalisadoesFoundation/talawa-api/issues/755)
+#### Issue : 
+- [Feature Request: Adding Advertisements](https://github.com/PalisadoesFoundation/talawa-api/issues/1394)
  
- #### Pull request: [ [GSoC]Feature Request : Performing Donations ( Ability to store donation transaction in Talwa-api ) ](https://github.com/PalisadoesFoundation/talawa-api/pull/756)
+ #### Pull request:
+ - [ Adding Advertisements](https://github.com/PalisadoesFoundation/talawa-api/pull/1395)
  
  Summary : 
-- Implementation of Donation  API routes for talawa-api
--  Mutations and Queries
-    - `getDonations` query to get list of donatinons made for that organization.
-    - `getDonationById` query to get details about the speicic donation.
-    - `getDonationByOrgsId` query getting the list of donation with thier organization id.
-    - `createDonation` mutation to create new Donation.
-    - `deleteDonation` mutation to delete the donation record in case if the transaction fails to complete from `flutter_braintree` pacakge or by the user.
-    
+- Added Adverstiment document Schema:
+```json advertisement:
+{
+ _id: ID,
+ orgID: ID,
+ name: String,
+ link: String,
+ type: POPUP | MENU | BANNER,
+ startDate: Date,   # Day when the ads would be shown to user (Default 1/day) 
+ endDate: Date,   # Last date to show ads.
+ createdAt: Date,
+ updatedAt: Date
+}
+```
+What would happen after end date of adverstisements:
+2. Developed GraphQL endpoint:
+- createAdverstisement()
+  - The created doc with the given provided schema data values and stores in the database.
+- deleteAdvertisement()
+  - To be used if user accidentaly created that document and he wants to delete that
+- getAdvertisement()
+  - Used by the mobile app to fetch all the ads to show filtered by the dates
 ## Other
 
 #### Technical Documenmtation for plugins 
