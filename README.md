@@ -146,7 +146,9 @@ Here are list of issues and pull requests reagarding that
 - Developed a feature in Talawa User Web app to showcase those advertisement as promoted posts
 
 #### Video Demo:
+- [Advertisement in Talawa Admin and Talawa Mobile | Palisadoes Foundation | Google Summer of Code 23](https://www.youtube.com/watch?v=66q8GHktN8A)
 
+---
 ### Talawa-api
 
 #### Issue : 
@@ -157,19 +159,6 @@ Here are list of issues and pull requests reagarding that
  
  Summary : 
 - Added Adverstiment document Schema:
-```js
-advertisement:{
- _id: ID,
- orgID: ID,
- name: String,
- link: String,
- type: POPUP | MENU | BANNER,
- startDate: Date,   # Day when the ads would be shown to user (Default 1/day) 
- endDate: Date,   # Last date to show ads.
- createdAt: Date,
- updatedAt: Date
-}
-```
 
 2. Developed GraphQL endpoint:
 - createAdverstisement()
@@ -189,34 +178,7 @@ advertisement:{
 Summary:
 - Added GraphQL endpoint in server to delete advertisement records.
 
-
-## Other
-
-#### Technical Documenmtation for plugins 
-
-### Talawa Docs - The documentation for talawa project.
-
-
-#### Issue : [Feature Request : Adding Plugin Architecture Overview Page](https://github.com/PalisadoesFoundation/talawa-docs/issues/251)
- 
-#### Pull request: [ [GSOC]Docs : Plugin Architecture Overview Page  ](https://github.com/PalisadoesFoundation/talawa-docs/pull/254)
- 
- Documentation Includes : 
- - Overview of What a plugin actually means in talawa repositories
- - A High-level diagram to describe workflow with description
- - Code Explanation
-
-
-#### Issue : [Docs : Adding Step by Step Plugin Example with Code explanation](https://github.com/PalisadoesFoundation/talawa-docs/issues/255)
- 
-#### Pull request:
- * [ [GSOC]Docs : Adding Step by Step Plugin Example with Code explanation   ](https://github.com/PalisadoesFoundation/talawa-docs/pull/256)
- * [[GSOC] Docs : Adding Step by Step Plugin Example](https://github.com/PalisadoesFoundation/talawa-docs/pull/258)
- 
- 
- Documentation Includes : 
- - Technical overview of the steps used to convert the features into pluigns
- - Step-by-step example of actual conversion of a feature to a plugin (ex. Donation feature) 
+--- 
 
 ## Working Demo Video of Plugin Architecture : 
 https://user-images.githubusercontent.com/65951872/189489729-ba913de7-8376-438f-a29d-bfcabecaddd2.mp4
