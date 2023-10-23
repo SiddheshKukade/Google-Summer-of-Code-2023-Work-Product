@@ -4,8 +4,9 @@
 
 #### Organization: [The Palisadoes Foundation](https://github.com/PalisadoesFoundation/)
 #### Project Name: Refactoring Plugins to WebSockets & Implementing Advertisement feature
-#### Google Summer of Code link: 
-#### Problem Statement :  https://summerofcode.withgoogle.com/programs/2023/projects/QD8ElW39
+#### Google Summer of Code link: https://summerofcode.withgoogle.com/programs/2023/projects/QD8ElW39
+
+**Problem Statement**
 There are a number of features that while useful are not absolutely necessary for the base Talawa app and would be better suited as plugins. The goal of this task is to refactor the existing plugins such as Newsfeed Advertising, Spam Mitigation, Inter-group Messaging, Analytics Integration, Check-ins functionality, etc. We recommended that you use our Plugin Guide. The scope of the Newsfeed Advertising and Spam Mitigation are given below. They can act as a template for the any additional plugins you wish to discuss with the mentors.
 
 **Newsfeed Advertising**: Community organizations often rely on the support of local businesses. This plugin would allow companies to advertise on the mobile application newsfeed. The plugin must consider both inexperienced advertisers who will only provide an image or video, and those who are more experienced users of online platforms.
